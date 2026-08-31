@@ -1,0 +1,12 @@
+{
+  "name": "OpenCode Dev",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+
+  "postCreateCommand": "npm install -g bun",
+
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
+}
