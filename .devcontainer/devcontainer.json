@@ -2,7 +2,7 @@
   "name": "OpenCode Dev",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
 
-  "postCreateCommand": "npm install -g bun",
+  "postCreateCommand": "npm install -g bun && curl https://qlty.sh | bash",
 
   "customizations": {
     "vscode": {
