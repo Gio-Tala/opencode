@@ -176,7 +176,7 @@ type ThemeProps = {
   onThemeApplied?: (theme: DesktopTheme, mode: "light" | "dark", scheme: ColorScheme) => void
 }
 
-type ThemeStore = {
+export type ThemeStore = {
   themes: Record<string, DesktopTheme>
   themeId: string
   colorScheme: ColorScheme
@@ -377,6 +377,18 @@ function createCancelPreview(store: ThemeStore, setStore: SetStoreFunction<Theme
       applyTheme(theme, store.themeId, store.mode, store.colorScheme)
     })
   }
+}
+
+export const ThemeTesting = {
+  isValidThemeId,
+  createThemeLoader,
+  createSetTheme,
+  createSetColorScheme,
+  createOnStorage,
+  createPreviewTheme,
+  createPreviewColorScheme,
+  createCommitPreview,
+  createCancelPreview,
 }
 
 export const { use: useTheme, provider: ThemeProvider } = createSimpleContext({
